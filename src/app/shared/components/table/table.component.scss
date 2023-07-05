@@ -1,0 +1,22 @@
+@import "variables";
+
+.table {
+  width: 100%;
+  border-spacing: 0 10px;
+
+  &__container {
+    background-color: $black;
+    border-spacing: 0 10px;
+
+    &-th {
+      background-color: $selago;
+      border-spacing: 0 10px;
+    }
+
+    &-td {
+      margin-bottom: 10px;
+      border-top: 1px solid $spindle;
+      border-bottom: 1px solid $spindle;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<header class="header-wrapper">
+
+  <button (click)="onSidenavToggle()" class="header-wrapper__toggle-button">
+    <mat-icon>menu_open</mat-icon>
+  </button>
+
+  <button mat-button [matMenuTriggerFor]="menu" class="header-wrapper__menu-button">
+    <img src="" alt="Face">
+    {{user?.email}}
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item class="header-wrapper__menu__menu-item">
+      <mat-icon>settings</mat-icon>
+      Settings
+    </button>
+  </mat-menu>
+
+</header>

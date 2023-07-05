@@ -1,0 +1,42 @@
+<div
+  class="sidenav-container"
+  [@onSideNavChange]="onSideNavChange ? 'open' : 'close'"
+>
+  <div class="sidenav-container__nav-list-wrapper">
+    <div>
+      <mat-nav-list class="sidenav-container__nav-list">
+        <a mat-list-item>
+          <span [@animateText]="linkText ? 'show' : 'hide'">
+          <img width="200px" src="../../../assets/images/icons/iteam-logo.svg" alt="company-logo"/>
+          </span>
+        </a>
+      </mat-nav-list>
+
+      <mat-nav-list class="sidenav-container__nav-list">
+        <a
+          routerLink="{{ page?.link }}"
+          mat-list-item
+          *ngFor="let page of pages"
+          class="sidenav-container__nav-list__item "
+        >
+          <mat-icon>{{ page?.icon }}</mat-icon>
+
+          <span [@animateText]="linkText ? 'show' : 'hide'"
+          > &nbsp; {{ page?.name }}
+          </span>
+        </a>
+      </mat-nav-list>
+    </div>
+
+    <div class="sidenav-container__logout-button-wrapper">
+      <button class="sidenav-container__logout-button-wrapper__button" (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span [@animateText]="linkText ? 'show' : 'hide'">
+          Log Out
+        </span>
+
+      </button>
+    </div>
+  </div>
+
+</div>

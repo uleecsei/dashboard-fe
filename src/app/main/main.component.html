@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened>
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content
+      [@onMainContentChange]="onSideNavChange ? 'open' : 'close'"
+    >
+      <div class="main_content-wrapper">
+        <div>
+          <app-header></app-header>
+
+          <div class="main-content">
+            <button *ngIf="isAdmin()" mat-raised-button (click)="toAdminPage()">
+              To Admin Page
+            </button>
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

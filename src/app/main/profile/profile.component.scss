@@ -1,0 +1,51 @@
+@import "variables";
+
+.user-wrapper {
+  padding: 15px;
+  width: 700px;
+  background-color: $selago;
+
+  &__avatar-area {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+    &__the-avatar {
+      margin-right: 20px;
+    }
+  }
+
+  &__name-zone-btn-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    &__edit {
+      cursor: pointer;
+      display: none;
+    }
+
+    &__field-wrapper:hover &__edit{
+      display: flex;
+    }
+
+    &__field-wrapper {
+      display: flex;
+      min-width: 260px;
+    }
+
+    &__field-buttons {
+      display: flex;
+    }
+  }
+}
+
+
+
+

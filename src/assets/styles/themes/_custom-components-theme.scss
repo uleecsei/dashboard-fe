@@ -1,0 +1,12 @@
+@import "../components/mat-card";
+@import "../components/buttons";
+@import "../components/inputs";
+@import "../components/form";
+
+@mixin custom-components-theme() {
+  @include mat-card-theme();
+  @include button-theme();
+  @include input-theme();
+  @include form-theme();
+}
+

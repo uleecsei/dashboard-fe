@@ -1,0 +1,39 @@
+@mixin input-theme() {
+
+  .mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex {
+    background-color: $white !important;
+    border: 1px solid $botticelli;
+    border-radius: 1px;
+  }
+
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 5px !important;
+    background-color: $white !important;
+    border: 1px solid $cornflower-blue;
+  }
+
+  .mat-form-field-underline {
+    display: none !important;
+  }
+
+  .user-wrapper__avatar-area__input {
+    display: none;
+  }
+
+  .user-wrapper__avatar-area__label {
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: $cornflower-blue;
+    color: $white;
+    margin-right: 10px;
+  }
+
+
+  .login-wrapper {
+    &__content-field {
+      width: 100%;
+    }
+  }
+}

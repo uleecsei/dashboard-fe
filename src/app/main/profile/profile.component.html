@@ -1,0 +1,37 @@
+<mat-card class="user-wrapper">
+  <div class="user-wrapper__avatar-area">
+    <img width="200px" src="{{ imageSrc }}" alt="User Avatar" class="user-wrapper__avatar-area__the-avatar"/>
+    <div>
+      <label class="user-wrapper__avatar-area__label">
+        <input #inputFile type="file" class="user-wrapper__avatar-area__input" (change)="setFileName()"/>
+        <span>Change Avatar</span>
+      </label>
+      <button class="user-wrapper__avatar-area__upload-btn" (click)="uploadPicture()">Upload</button>
+      <p *ngIf="!isFileUploaded">
+        {{file?.name}}
+      </p>
+    </div>
+  </div>
+
+  <form [formGroup]="formGroup" class="user-wrapper__form">
+    <div *ngFor="let unit of formFields"
+         class="user-wrapper__form__field-wrapper">
+      <mat-form-field
+        appearance="fill"
+        class="user-wrapper__form__field"
+      >
+        <mat-label>{{ unit }}</mat-label>
+        <input type="text" formControlName="{{ unit }}" matInput>
+      </mat-form-field>
+
+      <div class="user-wrapper__form__field-buttons">
+        <mat-icon *ngIf="!isUserStartEdit(unit)" class="user-wrapper__form__edit" (click)="startEditData(unit)">edit
+        </mat-icon>
+        <mat-icon (click)="sendData(unit)" *ngIf="isUserStartEdit(unit)">check</mat-icon>
+        <mat-icon (click)="cancelEditData(unit)" *ngIf="isUserStartEdit(unit)">cancel</mat-icon>
+      </div>
+    </div>
+  </form>
+</mat-card>
+
+

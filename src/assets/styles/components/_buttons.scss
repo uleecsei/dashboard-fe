@@ -1,0 +1,47 @@
+@import "variables";
+@mixin button-theme() {
+  .login-wrapper {
+    &__actions-button {
+      width: 100%;
+      padding: 10px 0;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background-color: $cornflower-blue;
+      color: $white;
+      margin-bottom: 12px !important;
+    }
+
+    &__actions-google-btn {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background-color: $white;
+      color: $martiniqueapprox;
+
+      &__icon {
+        height: 24px;
+        width: 24px;
+        margin-right: 55px;
+      }
+    }
+  }
+
+  .user-wrapper__avatar-area__upload-btn {
+    padding: 7px 30px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: $cornflower-blue;
+    color: $white;
+    margin-bottom: 12px !important;
+
+    &:hover {
+
+    }
+  }
+}

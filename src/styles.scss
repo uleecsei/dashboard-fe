@@ -1,0 +1,45 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+@import "~@angular/material/theming";
+@import "assets/styles/themes/custom-theme-palette";
+@import "assets/styles/themes/custom-theme-palette";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+$iteam-dashboard-fe-primary: mat.define-palette($primary, A200, A100, A400);
+$iteam-dashboard-fe-accent: mat.define-palette($primary, A200, A100, A400);
+$iteam-dashboard-fe-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $iteam-dashboard-fe-primary,
+      accent: $iteam-dashboard-fe-accent,
+    ),
+  )
+);
+@import "assets/styles/themes/custom-components-theme";
+
+@include angular-material-theme($iteam-dashboard-fe-theme);
+@include custom-components-theme();
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+}
